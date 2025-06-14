@@ -1,0 +1,39 @@
+# Java
+*.class
+*.log
+*.jar
+*.war
+*.ear
+
+# Spring Boot
+/target/
+/logs/
+/bin/
+/out/
+
+# IDEs
+*.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+*.DS_Store
+
+# OS
+Thumbs.db
+.DS_Store
+
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
