@@ -31,16 +31,19 @@ public class QuestionController {
     }
 
     @GetMapping("/quiz/{quizId}")
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     public List<Question> getByQuiz(@PathVariable Long quizId) {
         return questionService.getQuestionsByQuizId(quizId);
     }
 
     @GetMapping
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     public List<Question> getAll() {
         return questionService.getAllQuestions();
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasRole('ADMIN')")
     public void delete(@PathVariable Long id) {
         questionService.deleteQuestion(id);
     }

@@ -29,16 +29,19 @@ public class QuizController {
 	}
 	
 	@GetMapping
+	@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 	public List<Quiz> getAll(){
 		return quizService.getAllQuizzes();
 	}
 	
 	@GetMapping("/{id}")
+	@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 	public Quiz getById(@PathVariable Long id){
 		return quizService.getQuizById(id);
 	}
 	
 	@DeleteMapping("/{id}")
+	@PreAuthorize("hasRole('ADMIN')")
 	public void deleteById(@PathVariable Long id){
 	quizService.deleteQuiz(id);
 	}

@@ -29,16 +29,19 @@ public class CategoryController {
 	}
 	
 	@GetMapping()
+	@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 	public List<Category> getAll() {
 		return categoryService.getAllCategories();
 	}
 	
 	@GetMapping("/{id}")
+	@PreAuthorize("hasAnyRole('ADMIN', 'USER')")
 	public Category getById(@PathVariable Long id) {
 		return categoryService.getCategoryById(id);
 	}
 	
 	@DeleteMapping("/{id}")
+	@PreAuthorize("hasRole('ADMIN')")
 	public void delete(@PathVariable Long id) {
 		categoryService.deleteCategory(id);
 	}
