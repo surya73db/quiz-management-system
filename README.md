@@ -5,8 +5,9 @@ A Spring Boot-based REST API for creating and managing quizzes, categories, and 
 ## Features
 - Category CRUD
 - Quiz CRUD
-- Question CRUD (in progress)
+- Question CRUD
 - Relational Mapping (Quiz ↔ Category, Quiz ↔ Questions)
+- JWT Authentication & Role-based Access
 - RESTful architecture
 
 ## Tech Stack
@@ -17,5 +18,4 @@ A Spring Boot-based REST API for creating and managing quizzes, categories, and 
 - STS4 IDE
 
 ## Coming Soon
-- JWT Authentication & Role-based Access
 - Cloud Deployment (Heroku or Railway)
