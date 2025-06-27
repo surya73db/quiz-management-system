@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import jakarta.servlet.http.HttpServletRequest;
 
-@RestControllerAdvice
+//@RestControllerAdvice
 public class ValidationExceptionHandler {
 	
 	@ExceptionHandler(MethodArgumentNotValidException.class)
